@@ -1,0 +1,198 @@
+.book-wrapper {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom right, #1e1b4b, #27272a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .page {
+    background: #fdf6e3;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e5ddc5;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .page-inner {
+    padding: 2rem;
+    max-height: 100%;
+    max-width: 100%;
+    overflow-y: auto;
+    font-family: 'Cinzel', serif;
+  }
+  
+  .book-cover {
+    width: 500px;
+    height: 700px;
+    background: #f5deb3;
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 4px solid #d6b75d;
+    box-shadow: 0 0 60px rgba(255, 244, 176, 0.4);
+    cursor: pointer;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .book-cover:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 90px rgba(255, 255, 200, 0.6);
+  }
+  
+  .welcome-full {
+    background: url('/textures/parchment.jpg'); /* Add this image! */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2.5rem;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    color: #f5f1df;
+    font-family: 'Cinzel', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  /* Magic rune circle */
+  .magic-circle {
+    width: 140px;
+    height: 140px;
+    border: 2px solid #facc15;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 40px rgba(250, 204, 21, 0.3);
+    margin-bottom: 1rem;
+  }
+  
+  .glowing-rune {
+    font-size: 3rem;
+    color: #facc15;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0% { text-shadow: 0 0 5px #facc15, 0 0 10px #facc15; }
+    50% { text-shadow: 0 0 20px #facc15, 0 0 30px #facc15; }
+    100% { text-shadow: 0 0 5px #facc15, 0 0 10px #facc15; }
+  }
+  
+  .spell-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0.5rem 0;
+    color: #1a1a1a; /* Deep black ink */
+  }
+  
+  .spell-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #44403c; /* Dark muted gray for elegance */
+    margin-bottom: 1.5rem;
+  }
+  
+  .spell-description {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: #262626; /* Legible deep gray */
+    max-width: 500px;
+    line-height: 1.7;
+    padding: 0 1rem;
+  }
+  .spellbook-profile {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #1a1a1a;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+  }
+
+  .floating-glyphs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .floating-glyphs span {
+    position: absolute;
+    color: #facc15;
+    font-size: 1.5rem;
+    opacity: 0.7;
+    animation: float-glyphs 12s infinite linear;
+  }
+  
+  .floating-glyphs span:nth-child(1) {
+    left: 10%;
+    top: 60%;
+    animation-delay: 0s;
+  }
+  
+  .floating-glyphs span:nth-child(2) {
+    left: 70%;
+    top: 30%;
+    animation-delay: 3s;
+  }
+  
+  .floating-glyphs span:nth-child(3) {
+    left: 40%;
+    top: 80%;
+    animation-delay: 6s;
+  }
+  
+  @keyframes float-glyphs {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateY(-40px) scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      opacity: 0.7;
+    }
+  }
+  .tech-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    list-style-type: none;
+    font-size: 1.1rem;
+    line-height: 2;
+  }
+  .tech-list li::before {
+    content: "• ";
+    color: #d6b75d;
+    margin-right: 0.5rem;
+  }
+  
+      
+  
